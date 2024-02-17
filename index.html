@@ -13,9 +13,190 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles/style.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "btn-bg": "rgba(29, 209, 0, 0.10)",
+              "btn-border": "rgba(29, 209, 0, 0.40)",
+            },
+            backgroundImage: {
+              "banner-bg": "url(./images/banner.png)",
+            },
+          },
+        },
+      };
+    </script>
   </head>
   <body class="font-inter">
-    <header></header>
+    <header class="container mx-auto lg:max-w-[80%] mt-3">
+      <!-- Navbar -->
+      <nav>
+        <div class="navbar">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <a class="text-[#030712B2] font-raleway text-xl font-medium"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a class="text-[#030712B2] font-raleway text-xl font-medium"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a class="text-[#030712B2] font-raleway text-xl font-medium"
+                    >Destination</a
+                  >
+                </li>
+                <li>
+                  <a class="text-[#030712B2] font-raleway text-xl font-medium"
+                    >Search</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <a
+              class="hidden md:flex lg:flex text-[#030712] text-4xl font-raleway font-extrabold"
+              >Shubh Safar</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li>
+                <a class="text-[#030712B2] font-raleway text-xl font-medium"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a class="text-[#030712B2] font-raleway text-xl font-medium"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a class="text-[#030712B2] font-raleway text-xl font-medium"
+                  >Destination</a
+                >
+              </li>
+              <li>
+                <a class="text-[#030712B2] font-raleway text-xl font-medium"
+                  >Search</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <button
+              class="btn bg-btn-bg px-7 text-[#1DD100] font-raleway text-xl font-bold rounded-xl"
+            >
+              Bus
+              <img class="w-6 h-6" src="./images/bus-icon.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- banner -->
+      <div
+        class="mt-10 bg-banner-bg bg-no-repeat bg-center bg-cover rounded-[32px]"
+      >
+        <div class="flex flex-col justify-center items-center text-center py-[60px] lg:py-[160px]">
+          <h1>
+            <span
+              class="text-white text-3xl lg:text-6xl font-raleway font-extrabold mb-4 leading-10 lg:leading-[86px]"
+              >End-to-End Travel with</span
+            >
+            <br />
+            <span
+              class="text-[#1DD100] text-xl lg:text-6xl font-raleway font-extrabold leading-10 lg:leading-[86px]"
+            >
+              Shubh Safar Paribahan</span
+            >
+          </h1>
+          <p
+            class="w-[100%] lg:w-[60%] mx-auto text-center text-white text-xl font-inter font-normal leading-7 mt-5 p-[10px] lg:p-0"
+          >
+            Looking for safe, efficient, and affordable travel? Look no further!
+            Shubh Safar Paribahan, is your trusted partner for all your
+            transportation needs. Whether you're commuting to work, planning a
+            weekend getaway, or embarking on a long journey, we've got you
+            covered.
+          </p>
+          <button
+            class="bg-[#1DD100] rounded-xl py-[21px] px-[30px] text-[#030712] text-xl font-bold font-raleway mt-10"
+          >
+            Buy Tickets
+          </button>
+        </div>
+      </div>
+
+      <!-- Agency detail -->
+      <div class="hidden lg:grid grid-cols-3 gap-6 translate-y-[-70px] w-[80%] mx-auto">
+        <div
+          class="bg-white rounded-3xl flex flex-row gap-[24px] justify-center md:py-[32px] md:px-[40px] border-b-[3px] border-b-[#1DD100]"
+        >
+          <img class="h-[64px] w-[64px]" src="./images/people.png" alt="" />
+          <div>
+            <p class="text-[#030712] text-4xl font-bold font-inter">500K+</p>
+            <small class="text-[#03071299] font-inter font-normal text-[18px]"
+              >Registered users</small
+            >
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-3xl flex flex-row gap-[24px] justify-center py-[32px] border-b-[3px] border-b-[#1DD100]"
+        >
+          <img
+            class="h-[64px] w-[64px]"
+            src="./images/ticket-cupon.png"
+            alt=""
+          />
+          <div class="">
+            <p class="text-[#030712] text-4xl font-bold font-inter">
+              1.7 lacks
+            </p>
+            <small class="text-[#03071299] font-inter font-normal text-[18px]"
+              >Tickets sold</small
+            >
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-3xl flex flex-row gap-[24px] justify-center py-[32px] border-b-[3px] border-b-[#1DD100]"
+        >
+          <img class="h-[64px] w-[64px]" src="./images/stoppage.png" alt="" />
+          <div class="">
+            <p class="text-[#030712] text-4xl font-bold font-inter">80K+</p>
+            <small class="text-[#03071299] font-inter font-normal text-[18px]"
+              >Rental partners</small
+            >
+          </div>
+        </div>
+      </div>
+    </header>
     <main></main>
     <footer></footer>
   </body>
