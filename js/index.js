@@ -20,16 +20,12 @@ for (const seat of allSeats) {
         if (selectedSeat.length >= 4) {
           removeDisabledAttribute();
         }
-        // if (selectedSeat.length && user.phoneNumber) {
-        //     successBooking();
-        //   }
       } else {
         alert("You have Already Booked 4 ticket. Try again later!!!!!!!");
       }
     }
   });
 }
-
 
 function getInnerText(id) {
   return parseInt(document.getElementById(id).innerText);
@@ -80,8 +76,40 @@ document.getElementById("number").addEventListener("change", function (e) {
 function successBooking() {
   document.getElementById("next-button").removeAttribute("disabled");
 }
-function handleContinue(){
-    console.log(selectedSeat);
-    selectedSeat = [];
-    console.log(selectedSeat);
+function handleContinue() {
+  console.log(selectedSeat);
+  selectedSeat = [];
+  console.log(selectedSeat);
+}
+
+document.getElementById("apply-button").addEventListener("click", function (e) {
+  const userTypedCouponCode = document.getElementById("coupon-code").value;
+  console.log(userTypedCouponCode);
+  if (userTypedCouponCode === "NEW15") {
+    handleDiscount("total-price", 0.15,  "discount-price", "grand-total");
+  } else if (userTypedCouponCode === "Couple 20") {
+    handleDiscount("total-price", 0.2, "discount-price", "grand-total");
+  }
+});
+
+function handleDiscount(totalPriceId, discount, discountDivId, grandTotalID) {
+  const totalPrice = getInnerText(totalPriceId);
+  const discountPrice = totalPrice * discount;
+  const discountPriceDiv = document.getElementById(discountDivId);
+  const div = document.createElement("div");
+  div.innerHTML = `
+  <div class="flex justify-between">
+  <p class="text-[16px] font-inter font-medium text-[#030712]">
+    Discount Price
+  </p>
+  <p>
+    BDT
+    <span
+      class="text-[16px] font-inter font-medium text-[#030712]"
+      >${discountPrice}</span
+    >
+  </p>
+</div>`;
+  discountPriceDiv.appendChild(div);
+  setInnerText(grandTotalID, -discountPrice);
 }
