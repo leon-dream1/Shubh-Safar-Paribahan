@@ -25,6 +25,8 @@
             },
             backgroundImage: {
               "banner-bg": "url(./images/banner.png)",
+              "offer-bg": "url(./images/cupon-devider.png)",
+              "offer-bg-couple": "url(./images/info-devider.png)",
             },
           },
         },
@@ -124,7 +126,9 @@
       <div
         class="mt-10 bg-banner-bg bg-no-repeat bg-center bg-cover rounded-[32px]"
       >
-        <div class="flex flex-col justify-center items-center text-center py-[60px] lg:py-[160px]">
+        <div
+          class="flex flex-col justify-center items-center text-center py-[60px] lg:py-[160px]"
+        >
           <h1>
             <span
               class="text-white text-3xl lg:text-6xl font-raleway font-extrabold mb-4 leading-10 lg:leading-[86px]"
@@ -155,7 +159,9 @@
       </div>
 
       <!-- Agency detail -->
-      <div class="hidden lg:grid grid-cols-3 gap-6 translate-y-[-70px] w-[80%] mx-auto">
+      <div
+        class="hidden lg:grid grid-cols-3 gap-6 translate-y-[-70px] w-[80%] mx-auto"
+      >
         <div
           class="bg-white rounded-3xl flex flex-row gap-[24px] justify-center md:py-[32px] md:px-[40px] border-b-[3px] border-b-[#1DD100]"
         >
@@ -197,7 +203,86 @@
         </div>
       </div>
     </header>
-    <main></main>
+    <main>
+      <section class="my-[100px]">
+        <h2
+          class="text-[#030712] text-[40px] font-raleway font-bold text-center"
+        >
+          Best offers for you
+        </h2>
+        <div
+          class="container grid grid-cols-1 lg:grid-cols-2 gap-6 mx-auto lg:max-w-[80%]"
+        >
+          <div
+            class="flex flex-row items-center bg-[#FFBF0F] rounded-3xl bg-offer-bg bg-no-repeat bg-center mt-[65px] p-[50px]"
+          >
+            <div class="lg:w-[60%]">
+              <p>
+                <span class="text-[#030712CC] text-[40px] font-inter font-black"
+                  >15% OFF</span
+                >
+                <br />
+                <span
+                  class="text-[#030712CC] text-[20px] font-inter font-semibold"
+                  >on your next purchase</span
+                >
+                <br />
+                <span
+                  class="text-[#03071280] text-[18px] font-inter font-medium"
+                >
+                  use by January 2024</span
+                >
+              </p>
+            </div>
+            <div class="lg:w-[40%]">
+              <h4 class="text-[#030712] text-[32px] font-bold font-raleway">
+                NEW15
+              </h4>
+              <small class="text-[#03071266] text-xl font-medium font-raleway"
+                >Coupon Code</small
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-row items-center bg-[#F78C9C] rounded-3xl bg-offer-bg bg-no-repeat bg-center mt-[65px] p-[50px]"
+          >
+            <div class="lg:w-[60%]">
+              <p>
+                <span class="text-[#030712CC] text-[40px] font-inter font-black"
+                  >20% OFF</span
+                >
+                <br />
+                <span
+                  class="text-[#030712CC] text-[20px] font-inter font-semibold"
+                  >on your next purchase</span
+                >
+                <br />
+                <span
+                  class="text-[#03071280] text-[18px] font-inter font-medium"
+                >
+                  use by January 2024</span
+                >
+              </p>
+            </div>
+            <div class="lg:w-[40%]">
+              <h4 class="text-[#030712] text-[32px] font-bold font-raleway">
+                Couple 20
+              </h4>
+              <small class="text-[#03071266] text-xl font-medium font-raleway"
+                >Coupon Code</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-[68px]">
+          <button
+            class="rounded-xl border border-[#1DD100] py-[21px] px-[30px] text-xl font-raleway font-bold text-[#1DD100]"
+          >
+            See All Offer
+          </button>
+        </div>
+      </section>
+    </main>
     <footer></footer>
   </body>
 </html>
