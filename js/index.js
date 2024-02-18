@@ -90,6 +90,10 @@ document.getElementById("apply-button").addEventListener("click", function (e) {
   } else if (userTypedCouponCode === "Couple 20") {
     handleDiscount("total-price", 0.2, "discount-price", "grand-total");
   }
+  else{
+    alert('Invalid Coupon ): Please!!!!Provide a Valid Coupon......................')
+    document.getElementById("coupon-code").value = '';
+  }
 });
 
 function handleDiscount(totalPriceId, discount, discountDivId, grandTotalID) {
@@ -112,4 +116,5 @@ function handleDiscount(totalPriceId, discount, discountDivId, grandTotalID) {
 </div>`;
   discountPriceDiv.appendChild(div);
   setInnerText(grandTotalID, -discountPrice);
+  document.getElementById('coupon-section').classList.add("hidden");
 }
