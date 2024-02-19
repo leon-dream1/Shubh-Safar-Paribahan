@@ -77,9 +77,8 @@ function successBooking() {
   document.getElementById("next-button").removeAttribute("disabled");
 }
 function handleContinue() {
-  console.log(selectedSeat);
+  window.location.reload(true);
   selectedSeat = [];
-  console.log(selectedSeat);
 }
 
 document.getElementById("apply-button").addEventListener("click", function (e) {
